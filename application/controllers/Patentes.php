@@ -14,7 +14,6 @@
 			$data['titulo'] = "Todas las patentes";
 			$data['currentPage'] = "Patentes";
 			$datosPatentes['patentes'] = $this->PatentesModel->getAllPatentes();
-			$datosPatentes['inventores'] = $this->PatentesModel->getInventors();
 			$this->load->view('plantilla/header', $data);
 			$this->load->view('plantilla/navbar');
 			$this->load->view('patentes/index', $datosPatentes);
