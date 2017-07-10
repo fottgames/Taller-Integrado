@@ -1,0 +1,75 @@
+-- phpMyAdmin SQL Dump
+-- version 4.6.5.2
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 10-07-2017 a las 21:58:23
+-- Versión del servidor: 10.1.21-MariaDB
+-- Versión de PHP: 7.1.1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `patentes`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `patente`
+--
+
+CREATE TABLE `patente` (
+  `id` int(11) NOT NULL,
+  `n_solicitud` varchar(100) NOT NULL,
+  `n_registro` varchar(100) NOT NULL,
+  `fecha_registro` varchar(100) NOT NULL,
+  `solicitante` varchar(255) NOT NULL,
+  `descripcion` varchar(2000) NOT NULL,
+  `archivo` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `patente`
+--
+
+INSERT INTO `patente` (`id`, `n_solicitud`, `n_registro`, `fecha_registro`, `solicitante`, `descripcion`, `archivo`) VALUES
+(1, '1-1840', '1', '1840-10-03', 'FRANCISCO SAYER', 'PARA USAR LALANCHA CISTERNA EN EL PUERTO DE VALPARAISO. ESTE PRIVILEGIO ES PRORROGA DE LA CONCESION QUE PARA EL MISMO FIN i POR IGUAL PLAZO DE 4 AÑOS SE LE ACORDO AL SEÑOR SAYER EN EL AÑO 19837, O SEA CON ANTERIORIDAD A LA VIGENCIA DE LA LEI DEL 9 DE SEPTIEMBRE DE 1840.', 'patente.php?f=1840_1'),
+(2, '2-1840', '2', '1840-10-05', 'ANDRES BLEST', 'PARA HACER ROM POR EL METODO PARTICULAR QUE SE ACREDITRA SER DE NUEVA INTRODUCCION EN EL PAIS', 'patente.php?f=1840_2'),
+(3, '3-1840', '3', '1840-10-26', 'FEDERICO GREEN I CIA.', 'USO DE LA MAQUINA I TALADROS PARA ESTABLECER EN EL PAIS LOS POZOS ARTESIANOS.', 'patente.php?f=1840_3'),
+(4, '4-1840', 'ND', '1840-01-01', 'JUAN MANUEL DE LA BARRA', 'DESCRIPCION NO DISPONIBLE. VER EXPEDINTE -->', 'patente.php?f=1840_4'),
+(5, '4-1840', '4', '1840-10-29', 'JUAN MANUEL DE LA BARRA', 'METODO PARA ESTRAER I CLARIFICAR EL ACEITE DE LA SEMILLA DE ABANO SILVESTRE.', 'patente.php?f=1840_4'),
+(6, 'ND', '5-1840', '1840-01-01', 'FRANCISCO SILVA', 'DESCRIPCION NO DISPONIBLE. VER EXPEDINTE -->', 'patente.php?f=1840_5'),
+(7, '5-1840', '5', '1840-11-07', 'FRANCISCO SILVA', 'MAQUINAS I METODO PARA TEJER LAS FAJAS DE PUNTO DENOMINADO DE LA CHINA .', 'patente.php?f=1840_5'),
+(8, '6-1840', '6', '1840-11-11', 'JUAN STEVENSON', 'MAQUINA I PROCEDIMIENTO PARA BENEFICIAR TODA CLASE DE METALES DE PLATA POR AMALGACION. SE CONCEDIO ESTE PRIVILEJIO POR EL TERMINO DE LA VIDA DEL INVENTOR.', 'patente.php?f=1840_6'),
+(9, '7-1840', '7', '1840-11-11', 'JOSÉ LUIS CALLE', 'METODO PARA BENEFICIAR EL SEBO SEPARANDO LA ESTEARINA O ACIDO ESTEARICO DE LA OLEINA O ACIDO OLEICO QUE CONTIENE, POR MEDIO DE MAQUINAS A VAPOR, A FIN DE FABRICAR BUJIAS DE ESTEARINA.', 'patente.php?f=1840_7');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `patente`
+--
+ALTER TABLE `patente`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `patente`
+--
+ALTER TABLE `patente`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
