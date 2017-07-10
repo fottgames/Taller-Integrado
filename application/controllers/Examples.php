@@ -244,5 +244,27 @@ class Examples extends CI_Controller {
 			return $output;
 		}
 	}
+        
+    public function patentes()
+	{
+			$crud = new grocery_CRUD();
+
+			$crud->set_theme('datatables');
+			$crud->set_table('patente');
+		//	$crud->set_relation('officeCode','offices','city');
+		//	$crud->display_as('officeCode','Office City');
+		//	$crud->set_subject('Employee');
+
+		//	$crud->required_fields('lastName');
+
+		//	$crud->set_field_upload('file_url','assets/uploads/files');
+
+			$output = $crud->render();
+
+			$this->_example_output($output);
+	}    
+        
+        
 
 }
+

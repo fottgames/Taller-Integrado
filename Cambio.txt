@@ -1,0 +1,1 @@
+para la prueba se usa el nombre grucery y los datos se cargan desde el archivo examples_database.sql
