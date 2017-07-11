@@ -20,9 +20,8 @@ class Admin extends CI_Controller {
     }
 
     public function index() {
-        
-        $this->_example_output((object)array('output' => '' , 'js_files' => array() , 'css_files' => array()));
-        
+       $data['currentPage'] = "Admin";
+        $data['titulo'] = "administracion";
     }
 
     public function patentes() {
@@ -30,11 +29,10 @@ class Admin extends CI_Controller {
 
         $crud->set_table('patente');
         $output = $crud->render();
-        //echo $output;
-        $this->_example_output($output);
+        $this->genera_respuesta($output);
     }
 
-    function _example_output($output = null) {
+    function genera_respuesta($output = null) {
         $this->load->view('View_carga_basedatos.php', $output);
     }
 
