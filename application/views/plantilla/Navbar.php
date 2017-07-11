@@ -13,7 +13,7 @@
 	<ul class="nav navbar-nav">
             <li class="<?php //if ($currentPage == "Home") echo "active";?>"><a href="<?php echo base_url("home")?>" ><b>Inicio</b></a></li>
 		<li class="<?php //if ($currentPage == "Patentes") echo "active";?>"><a href="<?php echo base_url("patentes")?>" ><b>Patentes</b></a></li>
-                <li class="<?php //if ($currentPage == "admin") echo "active";?>"><a href="<?php echo base_url("admin/patentes")?>" ><b>Back end</b></a></li>
+                <li class="<?php //if ($currentPage == "admin") echo "active";?>"><a href="<?php echo base_url("admin")?>" ><b>Back end</b></a></li>
         </ul>
 
 	</div>
