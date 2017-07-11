@@ -9,7 +9,7 @@
 
 		<div>
 			<i class="fa fa-envelope"></i>
-			<p><a href="mailto:comunicaciones@upla.cl">jorge.encalada@alumnos.upla.cl</a></p>
+			
 		</div>
 
 	</footer>
