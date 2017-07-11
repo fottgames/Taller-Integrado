@@ -15,15 +15,18 @@ class Validar_login extends CI_Controller {
    //This method will have the credentials validation
    $this->load->library('form_validation');
 
-   $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
-   $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|callback_check_database');
+   $this->form_validation->set_rules('username', 'Username', 'trim|required');
+   $this->form_validation->set_rules('password', 'Password', 'trim|required|callback_check_database');
 
    if($this->form_validation->run() == FALSE)
    {
      //Field validation failed.  User redirected to login page
-     //$this->load->view('view_login');
-     redirect('Login');
-       echo 'estas en validar login y el resultado fue falso';
+        $this->load->view('plantilla/header');
+        $this->load->view('plantilla/navbar');
+        $this->load->view('View_login');
+        $this->load->view('plantilla/footer');
+     //redirect('Login');
+       //echo 'estas en validar login y el resultado fue falso';
    }
    else
    {

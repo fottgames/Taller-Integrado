@@ -17,15 +17,8 @@ class Admin extends CI_Controller {
     }
 
     public function index() {
-        if ($this->session->userdata('logged_in')) {
-            $session_data = $this->session->userdata('logged_in');
-            $data['username'] = $session_data['username'];
-           // $this->load->view('home_view', $data);
-            //self::patentes();
-        } else {
-            //If no session, redirect to login page
-            redirect('login', 'refresh');
-        }
+        self::login();
+        //self::patentes();
     }
 
     public function patentes() {
@@ -35,15 +28,30 @@ class Admin extends CI_Controller {
         $output = $crud->render();
 
 
-
-
-
         $this->genera_respuesta($output);
     }
 
     function genera_respuesta($output = null) {
         $this->load->view('View_carga_basedatos.php', $output);
     }
+    
+    
+    
+    public function login(){
+        
+        if ($this->session->userdata('logged_in')) {
+            $session_data = $this->session->userdata('logged_in');
+            $data['username'] = $session_data['username'];
+           // $this->load->view('home_view', $data);
+            //redirect('admin/patentes');
+            //self::patentes();
+            redirect('admin/patentes');
+        } else {
+            //If no session, redirect to login page
+            redirect('login');
+        }
+    }
+    
     
    public function logout()
  {
