@@ -45,7 +45,7 @@ class Admin extends CI_Controller {
            // $this->load->view('home_view', $data);
             //redirect('admin/patentes');
             //self::patentes();
-            redirect('admin/patentes');
+            //redirect('admin/patentes');
         } else {
             //If no session, redirect to login page
             redirect('login');
