@@ -1,7 +1,5 @@
 <?php
-
-if (!defined('BASEPATH'))
-    exit('No direct script access allowed');
+if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
@@ -13,8 +11,6 @@ class Admin extends CI_Controller {
         		$this->load->library('grocery_CRUD');
                         $this->load->view('plantilla/header');
 			$this->load->view('plantilla/navbar');
-                       // $this->load->view('BD');
-                        //self::index();
                         self::patentes();
 			$this->load->view('plantilla/footer');
     }
@@ -29,6 +25,11 @@ class Admin extends CI_Controller {
 
         $crud->set_table('patente');
         $output = $crud->render();
+        
+        
+        
+        
+        
         $this->genera_respuesta($output);
     }
 
