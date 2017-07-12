@@ -3,7 +3,7 @@
  <head>
    <title>Loogin</title>
  </head>
- <body>
+ <body class="text-center">
    <h1>Debes iniciar sesion</h1>
    <?php echo validation_errors(); ?>
    <?php echo form_open('validar_login'); ?>
