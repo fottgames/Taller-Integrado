@@ -3,8 +3,12 @@
  <head>
    <title>Loogin</title>
  </head>
+<<<<<<< HEAD
  <body>
      <div style="align-content: center">
+=======
+ <body class="text-center">
+>>>>>>> 547372a8deeac5e0e0089a59ca1c3cf6f2dfd00f
    <h1>Debes iniciar sesion</h1>
    <?php echo validation_errors(); ?>
    <?php echo form_open('validar_login'); ?>
