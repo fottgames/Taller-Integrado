@@ -4,9 +4,11 @@
    <title>Loogin</title>
  </head>
  <body>
+     <div style="align-content: center">
    <h1>Debes iniciar sesion</h1>
    <?php echo validation_errors(); ?>
    <?php echo form_open('validar_login'); ?>
+   
      <label for="username">Username:</label>
      <input type="text" size="20" id="username" name="username"/>
      <br/>
@@ -15,5 +17,6 @@
      <br/>
      <input type="submit" value="Login"/>
    </form>
+   </div>
  </body>
 </html>
