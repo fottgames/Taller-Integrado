@@ -12,7 +12,7 @@
 	<div class="collapse navbar-collapse navbar-ex1-collapse">
 	<ul class="nav navbar-nav">
                 <li class="<?php //if ($currentPage == "Home") echo "active";?>"><a href="<?php echo base_url("home")?>" ><b>Inicio</b></a></li>
-		<li class="<?php //if ($currentPage == "Patentes") echo "active";?>"><a href="<?php echo base_url("patentes")?>" ><b>Patentes</b></a></li>
+		<li class="<?php //if ($currentPage == "Patentes") echo "active";?>"><a href="<?php echo base_url("patentes/search")?>" ><b>Patentes</b></a></li>
                 <li class="<?php //if ($currentPage == "admin") echo "active";?>"><a href="<?php echo base_url("admin")?>" ><b>Back end</b></a></li>
                 <?php 
                 

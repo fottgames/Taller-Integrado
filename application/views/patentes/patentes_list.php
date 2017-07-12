@@ -15,7 +15,8 @@
 			<?php  
 				$specialchar = ["ñ", "Ñ"];
 			?>
-			<?php foreach ($actor as $key => $value): ?>
+			<?php if(isset($actor)){
+				foreach ($actor as $key => $value){ ?>
 				<tr>
 				<td><?php echo $value->n_solicitud ?></td>
 				<td><?php echo $value->n_registro ?></td>
@@ -24,7 +25,7 @@
 				<td><?php echo strtolower(str_replace($specialchar, "ni", $value->descripcion)); ?></td>
 				<td><span class="btn" data-toggle="modal" data-backdrop="static" data-target="#redirectModal-<?php echo $value->id; ?>" alt="Ver PDF" title="Ver PDF"><a target="_blank" href="http://barion.inapi.cl/BuscaBiblio/<?php echo $value->archivo; ?>"><img width="40px" src=<?php echo base_url()."assets/img/pdfIMG.png" ?> alt=""></span></td>
 			</tr>
-			<?php endforeach ?>
+			<?php  }}?>
 		</tbody>
 	</table>
 	<?php echo $this->pagination->create_links(); ?>
