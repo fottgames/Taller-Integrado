@@ -8,8 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php //echo $data['titulo']; ?>  Taller integrado</title>
 	 <!-- Bootstrap -->
-    <link href="<?php echo base_url() ?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
-    
+    <link href="<?php echo base_url() ?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">  
 </head>
 <body>
