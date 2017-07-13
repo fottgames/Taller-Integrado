@@ -8,6 +8,7 @@ class Chart_model extends CI_Model
     //get fruts data 
     public function get_all_fruits() 
     { 
-        return $this->db->get('patentes')->result(); 
+        //echo 'pase por el modelo';
+        return $this->db->get('patente')->result(); 
     } 
 } 

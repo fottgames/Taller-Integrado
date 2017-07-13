@@ -19,18 +19,17 @@ class Chart extends CI_Controller
  
     function index() 
         { 
-         $this->load->view('plantilla/header');
-        $this->load->view('plantilla/navbar');
+        $this->load->view('plantilla/header');
+         $this->load->view('plantilla/navbar');
         //$this->load->view('View_login');
-        
-        $this->load->view('view_chart'); 
-         $this->load->view('plantilla/footer');
 
-        } 
- 
-    public 
- 
-    function getdata() 
+        $this->load->view('view_chart');
+         $this->load->view('plantilla/footer');
+        //echo 'index';
+        //echo base_url() . 'chart/getdata';
+    }
+
+    public function getdata() 
         { 
         $data = $this->chart_model->get_all_fruits(); 
  
@@ -41,7 +40,7 @@ class Chart extends CI_Controller
             "label" => "Topping", 
             "pattern" => "", 
             "type" => "string" 
-        ); 
+                    ); 
         $responce->cols[] = array( 
             "id" => "", 
             "label" => "Total", 
@@ -56,7 +55,7 @@ class Chart extends CI_Controller
                     "f" => null 
                 ) , 
                 array( 
-                    "v" => (int)$cd->quantity, 
+                    "v" => (int)$cd->fecha_registro, 
                     "f" => null 
                 ) 
             ); 
