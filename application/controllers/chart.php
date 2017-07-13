@@ -19,43 +19,55 @@ class Chart extends CI_Controller
  
     function index() 
         { 
-        $this->load->view('plantilla/header');
+         $this->load->view('plantilla/header');
+         
          $this->load->view('plantilla/navbar');
         //$this->load->view('View_login');
 
         $this->load->view('view_chart');
-         $this->load->view('plantilla/footer');
+         //$this->load->view('plantilla/footer');
         //echo 'index';
         //echo base_url() . 'chart/getdata';
     }
 
     public function getdata() 
         { 
-        $data = $this->chart_model->get_all_fruits(); 
+        $data = $this->chart_model->cargartabla(); 
  
         //         //data to json 
  
-        $responce->cols[] = array( 
-            "id" => "", 
-            "label" => "Topping", 
+        $responce->cols[] = 
+                array(
+                    
+                    "id" => "", 
+            "label" => "nro", 
             "pattern" => "", 
             "type" => "string" 
+                    
+                    
                     ); 
-        $responce->cols[] = array( 
+        
+        
+        $responce->cols[] = 
+                array(
+                    
             "id" => "", 
-            "label" => "Total", 
+            "label" => "numero depatentes por año ", 
             "pattern" => "", 
             "type" => "number" 
-        ); 
+                    
+                    ); 
+        
+        
         foreach($data as $cd) 
             { 
             $responce->rows[]["c"] = array( 
                 array( 
-                    "v" => "$cd->solicitante", 
+                    "v" => "$cd->ano", 
                     "f" => null 
                 ) , 
                 array( 
-                    "v" => (int)$cd->fecha_registro, 
+                    "v" => (int)$cd->nro, 
                     "f" => null 
                 ) 
             ); 
